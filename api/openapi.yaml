@@ -1,0 +1,48 @@
+openapi: 3.0.3
+info:
+  title: Sample Webhook API
+  version: 1.0.0
+  description: Minimal OpenAPI spec used as a documentation sample.
+
+paths:
+  /webhooks/hello:
+    post:
+      summary: Return a greeting
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [name]
+              properties:
+                name:
+                  type: string
+                  example: "Luís"
+      responses:
+        "200":
+          description: Greeting returned
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                    example: true
+                  message:
+                    type: string
+                    example: "Hello Luís"
+        "400":
+          description: Missing required field
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  ok:
+                    type: boolean
+                    example: false
+                  error:
+                    type: string
+                    example: "name is required"
