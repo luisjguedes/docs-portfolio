@@ -1,9 +1,20 @@
-# docs-portfolio
+# Docs Portfolio — Luís Guedes da Silva
 
-Selected documentation samples showing how I structure, write, and maintain technical documentation as a product:
-- Structured docs (concept / how-to / reference / troubleshooting)
-- API documentation (OpenAPI example)
-- Diagrams (Mermaid)
-- Lightweight docs-as-code workflow (GitHub Actions build)
+A small, public, non-proprietary portfolio showcasing how I approach technical documentation as a product: information architecture, structured writing, docs-as-code workflows, and API documentation.
 
-All content is created as a public sample (generic and non-proprietary).
+## What this repo demonstrates
+- **Structured docs**: concept / how-to / reference / troubleshooting
+- **Docs-as-code**: Markdown + MkDocs with automated CI validation (GitHub Actions)
+- **API docs basics**: a minimal **OpenAPI** example (`/api/openapi.yaml`)
+- **Visual thinking**: a simple workflow diagram (Mermaid)
+
+## How to view the content
+- Browse the Markdown files under `docs/`
+- If published as a website (GitHub Pages), the site mirrors the same structure
+
+## Notes
+All examples are generic and created solely for portfolio purposes (no confidential or employer content).
+
+## Contact
+- LinkedIn: https://www.linkedin.com/in/luisjguedes/
+- Email: luisjguedes@gmail.com
