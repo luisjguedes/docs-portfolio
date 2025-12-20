@@ -7,6 +7,7 @@ nav:
   - Documentation approach:
       - Mental model: concepts/mental-model.md
       - Workflow diagram: concepts/workflow-diagram.md
+      - Docs strategy: strategy/docs-strategy.md
   - How-to guides:
       - Build a simple workflow: how-to/create-workflow.md
   - API documentation:
