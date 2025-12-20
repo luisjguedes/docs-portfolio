@@ -1,0 +1,25 @@
+site_name: Docs Portfolio — Luís Guedes da Silva
+site_description: Selected technical documentation samples (structured docs, API docs, diagrams, docs-as-code workflow).
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Concepts:
+      - Mental model: concepts/mental-model.md
+      - Workflow diagram: concepts/workflow-diagram.md
+  - How-to:
+      - Create a basic workflow: how-to/create-workflow.md
+  - Reference:
+      - API reference: reference/api.md
+  - Troubleshooting:
+      - Common issues: troubleshooting/common-issues.md
+
+theme:
+  name: mkdocs
+  locale: en
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
