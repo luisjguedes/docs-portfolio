@@ -3,23 +3,36 @@ site_description: Selected technical documentation samples (structured docs, API
 
 nav:
   - Home: index.md
-  - Getting Started: getting-started.md
-  - Concepts:
+  - Start here: getting-started.md
+  - Documentation approach:
       - Mental model: concepts/mental-model.md
       - Workflow diagram: concepts/workflow-diagram.md
-  - How-to:
-      - Create a basic workflow: how-to/create-workflow.md
-  - Reference:
-      - API reference: reference/api.md
+  - How-to guides:
+      - Build a simple workflow: how-to/create-workflow.md
+  - API documentation:
+      - API reference sample: reference/api.md
   - Troubleshooting:
       - Common issues: troubleshooting/common-issues.md
 
 theme:
-  name: mkdocs
-  locale: en
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.top
+    - navigation.sections
+    - content.code.copy
+    - toc.follow
 
 markdown_extensions:
   - admonition
   - toc:
       permalink: true
+      title: On this page
   - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
