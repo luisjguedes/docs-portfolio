@@ -2,6 +2,8 @@
 
 A small, public, non-proprietary portfolio showcasing how I approach technical documentation as a product: information architecture, structured writing, docs-as-code workflows, and API documentation.
 
+Live site: https://luisjguedes.github.io/docs-portfolio/
+
 ## What this repo demonstrates
 - **Structured docs**: concept / how-to / reference / troubleshooting
 - **Docs-as-code**: Markdown + MkDocs with automated CI validation (GitHub Actions)
