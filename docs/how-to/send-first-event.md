@@ -73,7 +73,7 @@ Expected result:
 	•	the same event_id returned
 
 	```md
-# Event Intake API — reference
+## Event Intake API — reference
 
 This page is a human-readable reference for the API.  
 The authoritative contract is the OpenAPI file: `api/openapi.yaml`.
