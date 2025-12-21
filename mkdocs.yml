@@ -1,27 +1,35 @@
 site_name: Docs Portfolio — Luís Guedes da Silva
 site_description: Selected technical documentation samples (structured docs, API docs, diagrams, docs-as-code workflow).
 
+repo_name: luisjguedes/docs-portfolio
+repo_url: https://github.com/luisjguedes/docs-portfolio
+edit_uri: edit/main/docs/
+
 nav:
   - Home: index.md
   - Start here: getting-started.md
+
   - Documentation approach:
       - Mental model: concepts/mental-model.md
       - Workflow diagram: concepts/workflow-diagram.md
       - Event Intake API (concept): concepts/event-intake.md
       - Docs strategy: strategy/docs-strategy.md
+
   - Contributing:
       - Markdown guide: contributing/markdown-guide.md
       - Style guide: contributing/style-guide.md
+
   - How-to guides:
       - Build a simple workflow: how-to/create-workflow.md
       - Send your first event: how-to/send-first-event.md
+
   - API documentation:
       - API reference sample: reference/api.md
       - Event Intake API (reference): reference/event-intake-api.md
+
   - Troubleshooting:
       - Common issues: troubleshooting/common-issues.md
       - Event Intake API issues: troubleshooting/event-intake.md
-      
 
 theme:
   name: material
@@ -32,10 +40,24 @@ theme:
     - navigation.top
     - navigation.sections
     - navigation.tracking
+    - navigation.indexes
     - search.suggest
     - search.highlight
     - content.code.copy
     - toc.follow
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
 markdown_extensions:
   - admonition
@@ -43,6 +65,8 @@ markdown_extensions:
       permalink: true
       title: On this page
   - tables
+  - attr_list
+  - md_in_html
   - pymdownx.details
   - pymdownx.highlight
   - pymdownx.inlinehilite
