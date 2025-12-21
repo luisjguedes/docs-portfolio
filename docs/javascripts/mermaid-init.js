@@ -1,12 +1,14 @@
 // docs/javascripts/mermaid-init.js
 (function () {
   function isDarkMode() {
-    // Material adds a data attribute when palette is active; this is a safe fallback:
-    return document.body.getAttribute("data-md-color-scheme") === "slate"
-      || window.matchMedia("(prefers-color-scheme: dark)").matches;
+    // Material palette (slate) OR OS preference
+    return (
+      document.body.getAttribute("data-md-color-scheme") === "slate" ||
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    );
   }
 
-  function initMermaid() {
+  function renderMermaid() {
     if (!window.mermaid) return;
 
     const dark = isDarkMode();
@@ -15,36 +17,29 @@
       startOnLoad: false,
       securityLevel: "strict",
       theme: dark ? "dark" : "default",
-
-      // Make it feel closer to “Material”
       themeVariables: {
         fontFamily:
           "ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji",
         fontSize: "14px",
 
-        // A little polish on nodes/edges
-        primaryColor: dark ? "#1f2937" : "#ffffff",
-        primaryTextColor: dark ? "#e5e7eb" : "#111827",
+        primaryColor: dark ? "#0f172a" : "#ffffff",
+        primaryTextColor: dark ? "#e5e7eb" : "#0f172a",
         primaryBorderColor: dark ? "#334155" : "#cbd5e1",
 
         lineColor: dark ? "#94a3b8" : "#64748b",
 
-        // Flowchart specifics
         clusterBkg: dark ? "#0b1220" : "#f8fafc",
         clusterBorder: dark ? "#334155" : "#cbd5e1",
       },
-
       flowchart: {
         curve: "basis",
         nodeSpacing: 50,
         rankSpacing: 50,
         padding: 12,
       },
-
-      sequence: { actorMargin: 50 },
     });
 
-    // Render all Mermaid fences on the page
+    // Re-hydrate Mermaid blocks
     document.querySelectorAll(".mermaid").forEach((el) => {
       const code = el.textContent;
       el.removeAttribute("data-processed");
@@ -54,26 +49,18 @@
     window.mermaid.run({ querySelector: ".mermaid" });
   }
 
-  // Run on initial load…
-  document.addEventListener("DOMContentLoaded", initMermaid);
+  // Initial page load
+  document.addEventListener("DOMContentLoaded", renderMermaid);
 
-  // …and on Material’s instant navigation (important!)
-  document.addEventListener("DOMContentLoaded", () => {
-    document.addEventListener("DOMContentLoaded", initMermaid);
-  });
+  // MkDocs Material instant navigation hook (this is the key)
+  // Fires after each page change when navigation.instant is enabled
+  document.addEventListener("document$", renderMermaid);
 
-  // Material uses "navigation.instant" → re-render on page changes:
-  document.addEventListener("DOMContentLoaded", () => {
-    document.addEventListener("DOMContentLoaded", initMermaid);
-  });
-
-  // Best hook for Material instant navigation:
-  document.addEventListener("DOMContentLoaded", () => {
-    document.addEventListener("md-content-updated", initMermaid);
-  });
-
-  // In case md-content-updated isn’t firing (older setups):
-  document.addEventListener("DOMContentLoaded", () => {
-    document.addEventListener("navigation:load", initMermaid);
+  // Optional: if user toggles light/dark, re-render diagrams
+  document.addEventListener("click", (e) => {
+    if (e.target.closest("[data-md-component='palette']")) {
+      // slight delay so Material applies the new scheme attribute
+      setTimeout(renderMermaid, 50);
+    }
   });
 })();
