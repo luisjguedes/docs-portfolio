@@ -22,7 +22,7 @@ Example payload:
     "user_id": "u_12345",
     "plan": "pro"
   }
-}'
+}
 ## Step 2: Send the event
 curl -X POST "https://api.example.com/v1/events" \
   -H "Authorization: Bearer test_123" \
