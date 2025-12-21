@@ -1,0 +1,21 @@
+name: vale
+on:
+  pull_request:
+  push:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Vale
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y vale
+
+      - name: Sync Vale packages
+        run: vale sync
+
+      - name: Lint docs
+        run: vale docs STYLE_GUIDE.md README.md
