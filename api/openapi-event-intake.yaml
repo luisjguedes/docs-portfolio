@@ -1,0 +1,154 @@
+openapi: 3.0.3
+info:
+  title: Event Intake API (Sample)
+  version: 1.0.0
+  description: >
+    A minimal, non-proprietary sample API used for documentation portfolio purposes.
+
+servers:
+  - url: https://api.example.com
+
+paths:
+  /v1/events:
+    post:
+      summary: Submit a single event
+      operationId: createEvent
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EventCreateRequest'
+            examples:
+              userCreated:
+                summary: user.created example
+                value:
+                  event_type: user.created
+                  occurred_at: "2025-12-21T10:30:00Z"
+                  idempotency_key: "0f3f6f9b-9f0b-4c8d-9f18-5b6a9d9d2d41"
+                  data:
+                    user_id: u_12345
+                    plan: pro
+      responses:
+        '202':
+          description: Accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventAcceptedResponse'
+        '400':
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '429':
+          description: Rate limit exceeded
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /v1/events/{event_id}:
+    get:
+      summary: Retrieve an event (sample)
+      operationId: getEvent
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: event_id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The event identifier returned by POST /v1/events.
+      responses:
+        '200':
+          description: Event returned
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Event'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+
+  schemas:
+    EventCreateRequest:
+      type: object
+      required: [event_type, occurred_at, idempotency_key, data]
+      properties:
+        event_type:
+          type: string
+          example: user.created
+        occurred_at:
+          type: string
+          format: date-time
+          example: "2025-12-21T10:30:00Z"
+        idempotency_key:
+          type: string
+          example: "0f3f6f9b-9f0b-4c8d-9f18-5b6a9d9d2d41"
+        data:
+          type: object
+          additionalProperties: true
+          description: Event-specific payload (object)
+
+    EventAcceptedResponse:
+      type: object
+      required: [event_id, status]
+      properties:
+        event_id:
+          type: string
+          example: evt_7m8k2p
+        status:
+          type: string
+          example: accepted
+
+    Event:
+      type: object
+      required: [event_id, event_type, occurred_at, data]
+      properties:
+        event_id:
+          type: string
+        event_type:
+          type: string
+        occurred_at:
+          type: string
+          format: date-time
+        data:
+          type: object
+          additionalProperties: true
+
+    ErrorResponse:
+      type: object
+      required: [error, message]
+      properties:
+        error:
+          type: string
+          example: validation_error
+        message:
+          type: string
+          example: occurred_at must be an ISO-8601 timestamp
