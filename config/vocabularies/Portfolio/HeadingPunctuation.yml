@@ -1,9 +1,0 @@
-extends: existence
-message: "Avoid ending headings with punctuation: '%s'."
-level: warning
-scope: heading
-tokens:
-  - '\.$'
-  - '\:$'
-  - '\;$'
-  - '\,$'
