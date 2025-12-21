@@ -4,7 +4,7 @@ Most automation platforms can be understood through a simple model:
 
 - A **trigger** starts a workflow when an event happens (time, webhook, message).
 - A **step/node** transforms data or calls another system.
-- A workflow is successful when it produces predictable results and clear failure modes.
+- A **workflow** is successful when it produces predictable results and clear failure modes.
 
 Good documentation makes these boundaries explicit:
 - What starts execution?
