@@ -16,13 +16,20 @@ flowchart LR
 
   %% “Text only” labels (no shape)
   classDef edgeLabel fill:transparent,stroke:transparent,color:#334155,font-size:12px;
-
-  %% Force label nodes to render as just text
   style V fill:transparent,stroke:transparent
   style X fill:transparent,stroke:transparent
 
-  %% Color the branch links (optional)
+  %% Link styling (IMPORTANT: style BOTH segments of each branch)
+  %% Link order here is:
+  %% 0: A-->B
+  %% 1: B---V
+  %% 2: V-->C
+  %% 3: B---X
+  %% 4: X-->D
+  linkStyle 0 stroke:#64748b,stroke-width:2px;
   linkStyle 1 stroke:#10B981,stroke-width:2px;
+  linkStyle 2 stroke:#10B981,stroke-width:2px;
   linkStyle 3 stroke:#EF4444,stroke-width:2px;
+  linkStyle 4 stroke:#EF4444,stroke-width:2px;
 
 ```
