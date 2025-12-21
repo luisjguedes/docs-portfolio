@@ -1,7 +1,6 @@
 # Style guide
 
-Baseline: Microsoft Writing Style Guide  
-[Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/)
+Baseline:[Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/)
 
 This repo adds lightweight, practical conventions so documentation is consistent, reviewable, and easy to maintain.
 
