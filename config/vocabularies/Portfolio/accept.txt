@@ -1,0 +1,10 @@
+MkDocs
+Material
+OpenAPI
+Mermaid
+GitHub
+GitHub Actions
+CI/CD
+docs-as-code
+YAML
+Markdown
