@@ -1,34 +1,20 @@
-# Documentation samples
+## Suggested reading order
+A quick path through the materials, depending on what you want to evaluate:
 
-## What this portfolio shows
-This repository contains small, representative samples showing how I approach documentation as a product.
+- **How I think about documentation:** [Docs strategy](strategy/docs-strategy.md)
+- **How I structure concepts:** [Mental model](concepts/mental-model.md)
+- **How I guide users through tasks:** [Send your first event](how-to/send-first-event.md)
+- **How I document APIs:** [Event Intake API (reference)](reference/event-intake-api.md)
 
-## Contents
-- **Structured docs** (concept / how-to / reference / troubleshooting)
-- **API documentation** (OpenAPI example)
-- **Diagrams** (Mermaid)
-- **Docs-as-code workflow** (GitHub Actions build)
+## What this portfolio contains
+- **Topic-based information architecture** (concept / how-to / reference / troubleshooting) with consistent navigation
+- **Developer-first writing patterns:** prerequisites, success criteria, and copy-paste examples
+- **API documentation fundamentals:** a minimal OpenAPI source + reference presentation
+- **Docs-as-code foundations:** Markdown, review-friendly structure, and automation-ready conventions
+- **Quality controls:** style guidance and repeatable patterns intended to scale across contributors
 
-## Notes
-All content is created as a public sample (generic and non-proprietary).
-
-# Documentation samples
-
-I’m a **Staff Technical Writer** with a systems + product mindset. This portfolio shows how I design documentation that scales: clear information architecture, structured content, API-first thinking, and docs-as-code workflows.
-
-## Quick links (reviewer shortcuts)
-- **Start here:** [Getting started](getting-started.md)
-- **Best “senior signal”:** [Docs strategy](strategy/docs-strategy.md)
-- **API work:** [Event Intake API reference](reference/event-intake-api.md)
-- **Quality gates:** [Style guide](../styles/STYLE_GUIDE.md) and CI linting
-
-## What this portfolio demonstrates
-- **Structured docs**: concept / how-to / reference / troubleshooting (topic-based, scannable, consistent)
-- **Docs-as-code**: Markdown + MkDocs + GitHub Actions (repeatable, reviewable, versioned)
-- **API docs**: minimal OpenAPI examples and developer workflows
-- **Visual thinking**: Mermaid diagrams that map the user journey and edge cases
-
-## If I had more time
-- Add task-focused landing pages for key audiences (admins vs developers)
-- Expand troubleshooting with error catalog + decision tree
-- Add doc metrics (search success, time-to-answer, freshness)
+## What I would iterate next
+- **Findability:** align navigation and labels to common entry points and likely search terms
+- **Reference depth:** expand auth, rate limits, pagination, idempotency, and error model consistency
+- **Operational readiness:** define ownership, review cadence, and definitions of done per content type
+- **Feedback loop:** add lightweight mechanisms for “Was this helpful?”, and track patterns over time
