@@ -1,6 +1,3 @@
-Paste:
-
-```md
 # Common issues
 
 ## 400 Bad Request
