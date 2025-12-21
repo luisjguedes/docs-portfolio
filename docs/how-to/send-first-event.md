@@ -25,6 +25,7 @@ Example payload:
 }
 ```
 ## Step 2: Send the event
+```json
 curl -X POST "https://api.example.com/v1/events" \
   -H "Authorization: Bearer test_123" \
   -H "Content-Type: application/json" \
@@ -36,8 +37,10 @@ curl -X POST "https://api.example.com/v1/events" \
       "user_id": "u_12345",
       "plan": "pro"
     }
-  }'
+  }
+```
 ## Step 3: Understand the response
+```json
 Success (accepted)
 You should receive 202 Accepted and a response like:
 {
@@ -50,6 +53,7 @@ If a required field is missing or malformed, you’ll receive 400 Bad Request:
   "error": "validation_error",
   "message": "occurred_at must be an ISO-8601 timestamp"
 }
+```
 ## Step 4: Test idempotency (optional)
 Send the same request again with the same idempotency_key.
 Expected result:
