@@ -55,14 +55,6 @@ If a required field is missing or malformed, you’ll receive 400 Bad Request:
 }
 ```
 ## Step 4: Test idempotency (optional)
-Send the same request again with the same idempotency_key.
-Expected result:
-	•	still 202 Accepted
-	•	the same event_id returned
----
-
-## 3) `docs/reference/event-intake-api.md`
-
 ```md
 # Event Intake API — reference
 
@@ -108,3 +100,4 @@ This endpoint is included as an example of a read operation.
 ### Responses
 - `200 OK` — event returned
 - `404 Not Found` — unknown `event_id`
+```
