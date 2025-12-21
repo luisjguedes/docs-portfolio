@@ -1,0 +1,18 @@
+/* docs/stylesheets/extra.css */
+
+/* Give diagrams breathing room and a “card” feel */
+.mermaid {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(100, 116, 139, 0.25);
+  background: rgba(148, 163, 184, 0.08);
+  overflow-x: auto;
+}
+
+/* Make SVG crisp and responsive */
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
