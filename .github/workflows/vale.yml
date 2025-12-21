@@ -9,13 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Vale
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y vale
-
-      - name: Sync Vale packages
-        run: vale sync
-
-      - name: Lint docs
-        run: vale docs STYLE_GUIDE.md README.md
+      - name: Run Vale
+        uses: errata-ai/vale-action@v2
+        with:
+          version: 3.7.1
+          files: docs README.md STYLE_GUIDE.md
