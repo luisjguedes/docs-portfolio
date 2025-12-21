@@ -1,7 +1,0 @@
-extends: existence
-message: "Prefer consistent second-person instructions (avoid switching to 'we')."
-ignorecase: true
-level: suggestion
-tokens:
-  - '\bwe\b'
-  - '\bour\b'
