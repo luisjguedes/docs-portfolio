@@ -23,6 +23,9 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.sections
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
     - content.code.copy
     - toc.follow
 
