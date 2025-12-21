@@ -9,6 +9,9 @@ nav:
       - Workflow diagram: concepts/workflow-diagram.md
       - Event Intake API (concept): concepts/event-intake.md
       - Docs strategy: strategy/docs-strategy.md
+  - Contributing:
+      - Markdown guide: contributing/markdown-guide.md
+      - Style guide: contributing/style-guide.md
   - How-to guides:
       - Build a simple workflow: how-to/create-workflow.md
       - Send your first event: how-to/send-first-event.md
@@ -18,6 +21,7 @@ nav:
   - Troubleshooting:
       - Common issues: troubleshooting/common-issues.md
       - Event Intake API issues: troubleshooting/event-intake.md
+      
 
 theme:
   name: material
