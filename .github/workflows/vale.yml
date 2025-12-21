@@ -14,3 +14,7 @@ jobs:
         with:
           version: 3.7.1
           files: docs/**/*.md README.md STYLE_GUIDE.md
+          reporter: github-check
+          level: warning
+          fail_on_error: true
+          filter_mode: nofilter
