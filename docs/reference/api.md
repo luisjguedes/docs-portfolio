@@ -1,6 +1,3 @@
-Paste:
-
-```md
 # API reference
 
 This page is a documentation sample and references an OpenAPI file stored in `/api/openapi.yaml`.
