@@ -1,0 +1,15 @@
+extends: existence
+message: "Avoid weak/marketing filler: '%s'. Prefer concrete wording."
+ignorecase: true
+level: warning
+tokens:
+  - simply
+  - just
+  - obviously
+  - clearly
+  - easy
+  - easily
+  - straightforward
+  - basically
+  - actually
+  - really
