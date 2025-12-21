@@ -72,7 +72,6 @@ Expected result:
 	•	still 202 Accepted
 	•	the same event_id returned
 
-	```md
 ## Event Intake API — reference
 
 This page is a human-readable reference for the API.  
@@ -117,5 +116,5 @@ This endpoint is included as an example of a read operation.
 ### Responses
 - `200 OK` — event returned
 - `404 Not Found` — unknown `event_id`
-```
+
   
