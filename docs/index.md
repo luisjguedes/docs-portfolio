@@ -10,4 +10,4 @@ This repository contains small, representative samples showing how I approach do
 - **Docs-as-code workflow** (GitHub Actions build)
 
 ## Notes
-All content is simply created as a public sample (generic and non-proprietary).
+All content is created as a public sample (generic and non-proprietary).
