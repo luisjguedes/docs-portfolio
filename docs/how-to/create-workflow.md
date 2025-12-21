@@ -1,6 +1,3 @@
-Paste:
-
-```md
 # Create a basic workflow
 
 ## Goal
