@@ -11,7 +11,7 @@ You need:
 ## Step 1: Prepare the request
 Choose an `idempotency_key`. Any stable string works (UUID recommended).
 
-# Example payload:
+### Example payload:
 
 ```json
 {
@@ -42,7 +42,7 @@ curl -X POST "https://api.example.com/v1/events" \
 ```
 ## Step 3: Understand the response
 
-# Success (accepted)
+### Success (accepted)
 
 ```json
 You should receive 202 Accepted and a response like:
@@ -52,7 +52,7 @@ You should receive 202 Accepted and a response like:
 }
 ```
 
-# Validation error
+### Validation error
 
 If a required field is missing or malformed, you’ll receive 400 Bad Request:
 
