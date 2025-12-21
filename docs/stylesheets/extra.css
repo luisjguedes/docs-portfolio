@@ -1,18 +1,35 @@
-/* docs/stylesheets/extra.css */
-
-/* Give diagrams breathing room and a “card” feel */
-.mermaid {
-  display: block;
-  margin: 1rem auto;
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  border: 1px solid rgba(100, 116, 139, 0.25);
-  background: rgba(148, 163, 184, 0.08);
-  overflow-x: auto;
+/* Make Mermaid feel more “Material” */
+.mermaid svg {
+  width: 100%;
+  height: auto;
 }
 
-/* Make SVG crisp and responsive */
-.mermaid svg {
-  max-width: 100%;
-  height: auto;
+/* Nodes: slightly thicker stroke + rounded corners + subtle depth */
+.mermaid .node rect,
+.mermaid .node polygon,
+.mermaid .node circle {
+  stroke-width: 1.6px !important;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.08));
+}
+
+/* Rounded corners for rectangular nodes */
+.mermaid .node rect {
+  rx: 10px;
+  ry: 10px;
+}
+
+/* Edges: cleaner strokes + nicer arrowheads */
+.mermaid .edgePath path {
+  stroke-width: 1.6px !important;
+}
+
+/* Labels: stronger weight + better readability */
+.mermaid .label text,
+.mermaid .edgeLabel text {
+  font-weight: 600;
+}
+
+/* Edge labels: remove the “pill” background look */
+.mermaid .edgeLabel {
+  background: transparent !important;
 }
