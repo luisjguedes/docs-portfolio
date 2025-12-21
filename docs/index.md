@@ -1,7 +1,7 @@
 # Documentation samples
 
 ## What this portfolio shows
-This is simply the best repository contains small, representative samples showing how I approach documentation as a product.
+This repository contains small, representative samples showing how I approach documentation as a product.
 
 ## Contents
 - **Structured docs** (concept / how-to / reference / troubleshooting)
