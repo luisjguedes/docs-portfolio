@@ -8,6 +8,7 @@ Live site: https://luisjguedes.github.io/docs-portfolio/
 - **Structured docs** (Concept / How-to / Reference / Troubleshooting)
 - **Docs-as-code** (Markdown + MkDocs Material) with CI checks (GitHub Actions)
 - **Quality guardrails**: Microsoft-aligned style linting with **Vale** (runs in CI)
+- Style guide: [STYLE_GUIDE.md](STYLE_GUIDE.md)
 - **API documentation** sample using **OpenAPI** (`api/openapi.yaml`)
 - **Diagramming** sample using Mermaid
 
