@@ -25,7 +25,8 @@ Example payload:
 }
 ```
 ## Step 2: Send the event
-```json
+
+```bash
 curl -X POST "https://api.example.com/v1/events" \
   -H "Authorization: Bearer test_123" \
   -H "Content-Type: application/json" \
