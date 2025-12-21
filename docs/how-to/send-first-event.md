@@ -44,8 +44,9 @@ curl -X POST "https://api.example.com/v1/events" \
 
 ### Success (accepted)
 
-```json
 You should receive 202 Accepted and a response like:
+
+```json
 {
   "event_id": "evt_7m8k2p",
   "status": "accepted"
@@ -71,4 +72,50 @@ Expected result:
 	•	still 202 Accepted
 	•	the same event_id returned
 
+	```md
+# Event Intake API — reference
+
+This page is a human-readable reference for the API.  
+The authoritative contract is the OpenAPI file: `api/openapi.yaml`.
+
+## Endpoint summary
+
+| Method | Path | Purpose |
+|---:|---|---|
+| POST | /v1/events | Submit a single event |
+| GET | /v1/events/{event_id} | Retrieve an event (sample) |
+
+## Authentication
+All requests require:
+
+`Authorization: Bearer <token>`
+
+## POST /v1/events
+
+### Headers
+- `Authorization: Bearer <token>` (required)
+- `Content-Type: application/json` (required)
+
+### Request body
+| Field | Type | Required | Notes |
+|---|---|:---:|---|
+| event_type | string | yes | Example: `user.created` |
+| occurred_at | string | yes | ISO-8601 timestamp |
+| idempotency_key | string | yes | Prevents duplicate ingestion |
+| data | object | yes | Event payload (JSON object) |
+
+### Responses
+- `202 Accepted` — event acknowledged
+- `400 Bad Request` — validation error
+- `401 Unauthorized` — missing/invalid token
+- `429 Too Many Requests` — rate limit exceeded
+- `500 Internal Server Error` — unexpected error
+
+## GET /v1/events/{event_id} (sample)
+This endpoint is included as an example of a read operation.
+
+### Responses
+- `200 OK` — event returned
+- `404 Not Found` — unknown `event_id`
+```
   
