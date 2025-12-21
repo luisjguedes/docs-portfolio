@@ -13,7 +13,7 @@ jobs:
         uses: errata-ai/vale-action@v2
         with:
           version: 3.7.1
-          files: docs/**/*.md README.md STYLE_GUIDE.md
+          files: docs README.md STYLE_GUIDE.md
           reporter: github-check
           level: warning
           fail_on_error: true
