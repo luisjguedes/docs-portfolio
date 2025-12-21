@@ -9,6 +9,11 @@ nav:
   - Home: index.md
   - Start here: getting-started.md
 
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
   - Documentation approach:
       - Mental model: concepts/mental-model.md
       - Workflow diagram: concepts/workflow-diagram.md
