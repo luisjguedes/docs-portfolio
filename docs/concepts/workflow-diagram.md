@@ -1,5 +1,6 @@
-´´´mermaid
-%%{init: {"flowchart": {"htmlLabels": false, "curve": "basis", "nodeSpacing": 60, "rankSpacing": 70}} }%%
+```mermaid
+
+ {"flowchart": {"htmlLabels": false, "curve": "basis", "nodeSpacing": 60, "rankSpacing": 70}} }%%
 flowchart LR
   A[Webhook trigger]:::trigger --> B[Validate input]:::process
 
@@ -23,4 +24,4 @@ flowchart LR
   %% Color the two paths (optional)
   linkStyle 1 stroke:#10B981,stroke-width:2px;
   linkStyle 3 stroke:#EF4444,stroke-width:2px;
-´´´
+```
