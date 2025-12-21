@@ -66,55 +66,11 @@ If a required field is missing or malformed, you’ll receive 400 Bad Request:
 
 ## Step 4: Test idempotency (optional)
 
-Send the same request again with the same idempotency_key.
+Send the **same request again** with the same `idempotency_key`.
 
 Expected result:
-	•	still 202 Accepted
-	•	the same event_id returned
+- `202 Accepted`
+- the **same** `event_id` as the first request
 
-## Event Intake API — reference
+If the `event_id` changes, your client is likely generating a new key (or changing the payload) between retries.
 
-This page is a human-readable reference for the API.  
-The authoritative contract is the OpenAPI file: `api/openapi.yaml`.
-
-## Endpoint summary
-
-| Method | Path | Purpose |
-|---:|---|---|
-| POST | /v1/events | Submit a single event |
-| GET | /v1/events/{event_id} | Retrieve an event (sample) |
-
-## Authentication
-All requests require:
-
-`Authorization: Bearer <token>`
-
-## POST /v1/events
-
-### Headers
-- `Authorization: Bearer <token>` (required)
-- `Content-Type: application/json` (required)
-
-### Request body
-| Field | Type | Required | Notes |
-|---|---|:---:|---|
-| event_type | string | yes | Example: `user.created` |
-| occurred_at | string | yes | ISO-8601 timestamp |
-| idempotency_key | string | yes | Prevents duplicate ingestion |
-| data | object | yes | Event payload (JSON object) |
-
-### Responses
-- `202 Accepted` — event acknowledged
-- `400 Bad Request` — validation error
-- `401 Unauthorized` — missing/invalid token
-- `429 Too Many Requests` — rate limit exceeded
-- `500 Internal Server Error` — unexpected error
-
-## GET /v1/events/{event_id} (sample)
-This endpoint is included as an example of a read operation.
-
-### Responses
-- `200 OK` — event returned
-- `404 Not Found` — unknown `event_id`
-
-  
