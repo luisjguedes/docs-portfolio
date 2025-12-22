@@ -1,6 +1,6 @@
 # Send your first event
 
-!!! info "At a glance"
+!!! info "At a glance"  
     **Audience:** Developers integrating the Event Intake API  
     **Prerequisites:** API base URL, bearer token, and `curl`  
     **Success criteria:** You receive **200 OK** with a JSON response  
