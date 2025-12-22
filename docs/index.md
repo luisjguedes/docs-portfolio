@@ -1,20 +1,22 @@
-## Suggested reading order
-A quick path through the materials, depending on what you want to evaluate:
+# Documentation samples
 
-- **How I think about documentation:** [Docs strategy](strategy/docs-strategy.md)
-- **How I structure concepts:** [Mental model](concepts/mental-model.md)
-- **How I guide users through tasks:** [Send your first event](how-to/send-first-event.md)
-- **How I document APIs:** [Event Intake API (reference)](reference/event-intake-api.md)
+## Recommended reading order
+A short path through the most representative samples:
 
-## What this portfolio contains
-- **Topic-based information architecture** (concept / how-to / reference / troubleshooting) with consistent navigation
-- **Developer-first writing patterns:** prerequisites, success criteria, and copy-paste examples
-- **API documentation fundamentals:** a minimal OpenAPI source + reference presentation
-- **Docs-as-code foundations:** Markdown, review-friendly structure, and automation-ready conventions
-- **Quality controls:** style guidance and repeatable patterns intended to scale across contributors
+- [Docs strategy](strategy/docs-strategy.md) — how I plan, govern, and scale documentation
+- [Mental model](concepts/mental-model.md) — conceptual framing and boundaries
+- [Send your first event](how-to/send-first-event.md) — task flow with explicit prerequisites and success criteria
+- [Event Intake API (reference)](reference/event-intake-api.md) — reference structure, examples, and edge-case awareness
 
-## What I would iterate next
-- **Findability:** align navigation and labels to common entry points and likely search terms
-- **Reference depth:** expand auth, rate limits, pagination, idempotency, and error model consistency
-- **Operational readiness:** define ownership, review cadence, and definitions of done per content type
-- **Feedback loop:** add lightweight mechanisms for “Was this helpful?”, and track patterns over time
+## What’s included
+- **Topic-based information architecture** (concept / how-to / reference / troubleshooting) with consistent navigation and patterns
+- **Developer-first writing**: prerequisites, expected results, copy-paste examples, and clear terminology
+- **API documentation essentials**: minimal OpenAPI source + reference presentation aligned to integration needs
+- **Docs-as-code foundations**: Markdown content designed for review, iteration, and automation-friendly workflows
+- **Quality controls**: style guidance and repeatable conventions aimed at consistency across contributors
+
+## Next iterations (if scaling this further)
+- **Findability**: tune labels and navigation based on common entry points and real search terms
+- **Reference depth**: expand authentication, rate limits, pagination, idempotency, and error model consistency
+- **Operational model**: define ownership, review cadence, and “definition of done” per content type
+- **Feedback loop**: add lightweight signals (helpfulness, support patterns) to guide continuous improvement
