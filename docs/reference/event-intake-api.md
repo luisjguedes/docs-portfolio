@@ -1,4 +1,4 @@
-# Event Intake API — reference
+# Event Intake API (reference)
 
 This page is a human-readable reference for the **Event Intake API**.  
 The authoritative contract is the OpenAPI file: `api/openapi-event-intake.yaml`.
