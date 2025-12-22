@@ -1,10 +1,10 @@
 # Send your first event
 
 !!! info "At a glance"
-    **Audience:** Developers integrating the Event Intake API  
-    **Prereqs:** Base URL + token + `curl`  
-    **Success:** You receive `200 OK` with a JSON response  
-    **Common pitfalls:** Missing required fields, invalid timestamps, duplicate requests
+            **Audience:** Developers integrating the Event Intake API
+            **Prereqs:** Base URL + token + `curl`
+            **Success:** You receive `200 OK` with a JSON response
+            **Common pitfalls:** Missing required fields, invalid timestamps, duplicate requests
 
 This guide shows how to send a minimal event to the **Event Intake API** and interpret the response.
 
