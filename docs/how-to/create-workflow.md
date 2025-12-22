@@ -56,5 +56,5 @@ You receive this response:
 ```
 
 ## Notes
-- Clients should send `Content-Type: application/json`.
+- You should send `Content-Type: application/json`.
 - Keep success and error responses consistent (predictable fields and shapes).
