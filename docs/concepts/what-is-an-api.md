@@ -2,12 +2,6 @@
 
 An API (Application Programming Interface) is a **contract** that lets one system request data or actions from another system in a predictable way.
 
-> **This page uses tabs.**  
-> To render the tabs in MkDocs Material, make sure your `mkdocs.yml` includes:
->
-> - `pymdownx.tabbed` (recommended with `alternate_style: true`)
-> - `pymdownx.superfences` (you already use this)
-
 ---
 
 === "Developer"
@@ -51,16 +45,18 @@ An API (Application Programming Interface) is a **contract** that lets one syste
 
     ## API — Product / Business view
 
-    An API is the interface that lets your product integrate with other tools and customers’ systems **without manual work**. It defines:
+    An API is the interface that lets your product integrate with other tools and customers’ systems **without manual work**.
+
+    It defines:
     - **What’s possible** (operations/capabilities)
     - **What data is exchanged** (schemas)
     - **The rules** (authentication, limits, errors, versioning)
 
     A good API reduces integration time, increases adoption, and lowers support costs. A weak API creates churn: integrations break, customers lose trust, and every change becomes risky.
 
-    What strong APIs/docs make clear:
+    What strong APIs and docs make clear:
     - Capabilities and constraints (what it does / doesn’t do)
-    - Versioning and backward compatibility expectations
+    - Versioning and backward-compatibility expectations
     - Reliability behaviors (retries, idempotency, rate limits)
     - Security model (auth, scopes, least privilege)
 
@@ -68,7 +64,8 @@ An API (Application Programming Interface) is a **contract** that lets one syste
 
     ## API — Support / QA view
 
-    An API is where integrations succeed or fail. When something breaks, support and QA need fast answers:
+    An API is where integrations succeed or fail. When something breaks, Support and QA need fast answers:
+
     - Was the request valid?
     - Was the caller authorized?
     - Did the system accept, reject, or partially process it?
@@ -78,11 +75,12 @@ An API (Application Programming Interface) is a **contract** that lets one syste
     - Repro steps (copy/paste HTTP or curl examples)
     - Clear signals (status codes, error codes, request IDs)
     - Deterministic behavior (validation rules, timestamp rules, idempotency)
-    - Useful logs/IDs for escalation (correlation/request IDs)
+    - Useful IDs for escalation (correlation IDs / request IDs)
 
     ### What to capture in a bug/support ticket
+
     - Endpoint + method
     - Status code + response body
-    - Request headers (redact secrets)
+    - Request headers (**redact secrets**)
     - Request ID / correlation ID (if provided)
     - Timestamp and retry attempts
