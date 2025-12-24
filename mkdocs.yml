@@ -11,6 +11,7 @@ nav:
   - Documentation approach:
       - Mental model: concepts/mental-model.md
       - Workflow diagram: concepts/workflow-diagram.md
+      - What is an API?: concepts/what-is-an-api.md
       - Event Intake API (concept): concepts/event-intake.md
       - Docs strategy: strategy/docs-strategy.md
   - Contributing:
