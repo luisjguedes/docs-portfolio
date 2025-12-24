@@ -15,11 +15,11 @@ An API (Application Programming Interface) is a **contract** that lets one syste
 
     An API is a set of endpoints that accept requests and return responses. With HTTP APIs, you send a request (method + URL + headers + body) and you receive a response (status code + headers + body).
 
-    **Key concepts**
-    - **Contract:** documented inputs/outputs (often OpenAPI)
-    - **Auth:** how you prove identity (Bearer tokens, OAuth, etc.)
-    - **Errors:** consistent error shape + status codes
-    - **Idempotency:** safe retries without creating duplicates
+    **Key concepts**  
+    - **Contract:** documented inputs/outputs (often OpenAPI)  
+    - **Auth:** how you prove identity (Bearer tokens, OAuth, etc.)  
+    - **Errors:** consistent error shape + status codes  
+    - **Idempotency:** safe retries without creating duplicates  
     - **Rate limits:** how many requests you can make per time window
 
     ### Minimal example
