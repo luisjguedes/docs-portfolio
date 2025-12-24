@@ -2,7 +2,7 @@
 
 An API (Application Programming Interface) is a **contract** that lets one system request data or actions from another system in a predictable way.
 
-!!! info "At a glance"
+!!! info "At a glance"  
     **Audience:** Developers, product/business stakeholders, and support/QA  
     **Purpose:** Explain what an API is in three practical “views”  
     **Takeaway:** Good APIs are predictable (clear contract, auth, errors, and retry behavior)
