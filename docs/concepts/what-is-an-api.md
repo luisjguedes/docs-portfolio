@@ -3,6 +3,7 @@
 An API (Application Programming Interface) is a **contract** that lets one system request data or actions from another system in a predictable way.
 
 !!! info "At a glance"  
+
     **Audience:** Developers, product/business stakeholders, and support/QA  
     **Purpose:** Explain what an API is in three practical “views”  
     **Takeaway:** Good APIs are predictable (clear contract, auth, errors, and retry behavior)
@@ -16,6 +17,7 @@ An API (Application Programming Interface) is a **contract** that lets one syste
     An API is a set of endpoints that accept requests and return responses. With HTTP APIs, you send a request (method + URL + headers + body) and you receive a response (status code + headers + body).
 
     **Key concepts**  
+    
     - **Contract:** documented inputs/outputs (often OpenAPI)  
     - **Auth:** how you prove identity (Bearer tokens, OAuth, etc.)  
     - **Errors:** consistent error shape + status codes  
@@ -53,6 +55,7 @@ An API (Application Programming Interface) is a **contract** that lets one syste
     An API is the interface that lets your product integrate with other tools and customers’ systems **without manual work**.
 
     **What it defines**  
+    
     - **What’s possible:** operations/capabilities  
     - **What data is exchanged:** schemas and field meanings  
     - **The rules:** authentication, limits, errors, versioning
@@ -60,6 +63,7 @@ An API (Application Programming Interface) is a **contract** that lets one syste
     A strong API reduces integration time, increases adoption, and lowers support costs. A weak API creates churn: integrations break, customers lose trust, and every change becomes risky.
 
     **What strong APIs and docs make clear**  
+    
     - Capabilities and constraints (what it does / doesn’t do)  
     - Versioning and backward-compatibility expectations  
     - Reliability behaviors (retries, idempotency, rate limits)  
@@ -77,6 +81,7 @@ An API (Application Programming Interface) is a **contract** that lets one syste
     - Is it safe to retry?
 
     **What good API docs enable**  
+    
     - Repro steps (copy/paste HTTP or curl examples)  
     - Clear signals (status codes, error codes, request IDs)  
     - Deterministic behavior (validation rules, timestamp rules, idempotency)  
