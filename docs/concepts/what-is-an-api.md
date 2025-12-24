@@ -52,17 +52,17 @@ An API (Application Programming Interface) is a **contract** that lets one syste
 
     An API is the interface that lets your product integrate with other tools and customers’ systems **without manual work**.
 
-    **What it defines**
-    - **What’s possible:** operations/capabilities
-    - **What data is exchanged:** schemas and field meanings
+    **What it defines**  
+    - **What’s possible:** operations/capabilities  
+    - **What data is exchanged:** schemas and field meanings  
     - **The rules:** authentication, limits, errors, versioning
 
     A strong API reduces integration time, increases adoption, and lowers support costs. A weak API creates churn: integrations break, customers lose trust, and every change becomes risky.
 
-    **What strong APIs and docs make clear**
-    - Capabilities and constraints (what it does / doesn’t do)
-    - Versioning and backward-compatibility expectations
-    - Reliability behaviors (retries, idempotency, rate limits)
+    **What strong APIs and docs make clear**  
+    - Capabilities and constraints (what it does / doesn’t do)  
+    - Versioning and backward-compatibility expectations  
+    - Reliability behaviors (retries, idempotency, rate limits)  
     - Security model (auth, scopes, least privilege)
 
 === "Support / QA"
@@ -76,10 +76,10 @@ An API (Application Programming Interface) is a **contract** that lets one syste
     - Did the system accept, reject, or partially process it?
     - Is it safe to retry?
 
-    **What good API docs enable**
-    - Repro steps (copy/paste HTTP or curl examples)
-    - Clear signals (status codes, error codes, request IDs)
-    - Deterministic behavior (validation rules, timestamp rules, idempotency)
+    **What good API docs enable**  
+    - Repro steps (copy/paste HTTP or curl examples)  
+    - Clear signals (status codes, error codes, request IDs)  
+    - Deterministic behavior (validation rules, timestamp rules, idempotency)  
     - Useful IDs for escalation (correlation IDs / request IDs)
 
     ### What to capture in a bug/support ticket
